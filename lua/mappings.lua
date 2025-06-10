@@ -26,7 +26,7 @@ function _G.toggle_floating_terminal()
     border = "rounded",
   })
 
-  vim.fn.termopen(vim.o.shell)
+  vim.fn.termopen(os.getenv("SHELL") .. " -i")
   vim.cmd("startinsert")
 end
 
